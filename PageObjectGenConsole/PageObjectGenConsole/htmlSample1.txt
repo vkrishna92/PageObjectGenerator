@@ -1,0 +1,873 @@
+﻿<div data-dyn-serverid="88_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Tab" data-dyn-role="Section" class="FastTabs section fill-width fill-height layout-container layout-vertical" data-dyn-container="true" role="tablist" data-dyn-excludefromhistory="true" data-dyn-content="append: '*'" data-dyn-bind="
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        keyDown: $data.keyDown,
+        sizing: $dyn.layout.sizing($data, undefined, $data.LayoutMinHeight),
+        dynamicSizing: { height: false, width: true },
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical, children: $value($data.Children) },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter" data-dyn-content-applied="true" data-dyn-template-applied="true" id="Dialog_6_Tab" data-dyn-lastvisible="true"><div data-dyn-serverid="90_0" data-dyn-rootserverid="87_0" data-dyn-controlname="FieldTab" data-dyn-role="SectionPage" class="section-page layout-reflow-scope fill-width layout-container layout-vertical" role="tab" data-dyn-container=".section-container" data-dyn-bind="
+        css: { 'section-page-noncollapsible': $value($data.FastTabExpanded) == 'Always'},
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        keyDown: $data.keyDown,
+        sizing: {
+            width: $dyn.layout.Size.available,
+            height:  ($value($data.FastTabExpanded) == 'Always') ? $dyn.layout.Size.available : $dyn.layout.Size.content,
+            minFlexHeight: ($value($data.FastTabExpanded) == 'Always') ? '280px' : undefined,
+        },
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical }" data-dyn-template-applied="true" id="Dialog_6_FieldTab" data-dyn-lastvisible="true" aria-expanded="false"><header class="section-page-header fill-width layout-container layout-horizontal layout-horizontal-bottomalign" tabindex="0" data-dyn-bind="
+        click: $data.Clicked,
+        skip: $dyn.options(function() { return { skip: $data.Skip, enabled: true }; }, $data.Updating),
+        ariaExpanded: $data.Expanded,
+        id: $data.Id + '_header',
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.content },
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft }" aria-expanded="true" id="Dialog_6_FieldTab_header" aria-labelledby="Dialog_6_FieldTab_caption">
+        <h1 class="section-page-caption" data-dyn-bind="
+            id: $data.Id + '_caption',
+            title: $data.Label,
+            labelFor: $dyn.ui.labelFor($element.parentNode, $data),
+            superTooltip: $dyn.ui.superTooltip($data)" id="Dialog_6_FieldTab_caption" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" title="Parameters">Parameters</h1>
+        <div data-dyn-bind="sizing: { width: $dyn.layout.Size.available }" class="fill-width">
+            <div data-dyn-content="replace: '[data-dyn-role=SectionPageHeader]'" data-dyn-content-applied="true" style="display: none;"></div><div data-dyn-serverid="91_0" data-dyn-rootserverid="87_0" data-dyn-controlname="SysGen_FieldTabHeader" data-dyn-role="SectionPageHeader" class="section-page-summary layout-container layout-horizontal layout-right layout-horizontal-bottomalign" data-dyn-bind="
+    sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.content },
+    layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalRight }" data-dyn-container="true" data-dyn-content="append: { content: '*' }" data-dyn-content-applied="true" data-dyn-template-applied="true" id="Dialog_6_SysGen_FieldTabHeader"></div>
+        </div>
+        <div class="section-page-arrow"></div>
+    </header><div class="section-container container-hasBackground fill-width layout-container layout-vertical" role="tabpanel" data-dyn-bind="
+        visible: $data.Expanded,
+        id: $data.Id + '_container',
+        sizing: { width: $dyn.layout.Size.available, height:  ($value($data.FastTabExpanded) == 'Always') ? $dyn.layout.Size.available : $dyn.layout.Size.content,  },
+        layout: $dyn.layout.containerBinding($data),
+        attr: { 'aria-labelledBy': $data.Id + '_header'}" data-dyn-content="append: ':not([data-dyn-role=SectionPageHeader])'" data-dyn-content-applied="true" data-dyn-lastvisible="true" id="Dialog_6_FieldTab_container" aria-labelledby="Dialog_6_FieldTab_header" style="">
+    <div data-dyn-serverid="92_0" data-dyn-rootserverid="87_0" data-dyn-controlname="DialogStartGrp" data-dyn-role="Group" class="Auto group no-caption-group fill-width layout-container layout-vertical" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_DialogStartGrp" data-dyn-lastvisible="true" data-dyn-frametype="None"><div class="group_header fill-width" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="false" style="display: none;">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)">
+        </label>
+    </div><div class="group_content fill-width layout-container layout-vertical" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <div data-dyn-serverid="93_0" data-dyn-rootserverid="87_0" data-dyn-controlname="MainGrp" data-dyn-role="Group" class="Auto group no-caption-group fill-width layout-container layout-vertical" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_MainGrp" data-dyn-lastvisible="true" data-dyn-frametype="None"><div class="group_header fill-width" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="false" style="display: none;">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)">
+        </label>
+    </div><div class="group_content fill-width layout-container layout-horizontal" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <div class="layout-column balanced-column fill-height"><div data-dyn-serverid="94_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Grp_5" data-dyn-role="Group" class="Auto group layout-container layout-vertical layout-breakable-tail-group" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_Grp_5" data-dyn-lastvisible="true" data-dyn-frametype="Auto"><div class="group_header layout-container layout-horizontal layout-horizontal-bottomalign" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="true">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)" id="Dialog_6_Grp_5_text" for="Dialog_6_Grp_5" tabindex="-1">Parameters</label>
+    </div><div class="group_content layout-container layout-vertical" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <div data-dyn-serverid="95_0" data-dyn-rootserverid="87_0" data-dyn-controlname="FileUpload" data-dyn-role="FileUpload" class="MinimalWithFilename FileUpload minimalWithFilename" aria-live="polite" data-dyn-bind="visible: $data.Visible, enabled: $data.Enabled, label: $dyn.value($data.FileNameLabel),
+    css: { 'minimal' : $dyn.value($data.Style) == $dyn.ui.FileUploadStyle.MinimalStyle, 'minimalWithFilename' : $dyn.value($data.Style) == $dyn.ui.FileUploadStyle.MinimalWithFileNameStyle }" data-dyn-template-applied="true" id="Dialog_6_FileUpload" data-dyn-lastvisible="true" aria-label="Select a file to upload." aria-expanded="false"><span data-dyn-role="Label" class="fileUpload-Label staticText layout-ignoreArrange" data-dyn-bind="
+    text: { text: $dyn.value($data.Text), emptyStr: '&nbsp;' /* Use non-breaking space to maintain height when using an empty string. */},
+    sizing: $dyn.layout.sizing($data),
+    extendedStyle: $data.Style,
+    foregroundColor: $data.ForegroundColor,
+    backgroundColor: $data.BackgroundColor,
+    visible: $data.Visible,
+    skip: $dyn.ui.skip($data)" data-dyn-options="{
+        Name: $data.Name + 'FileNameLabel',
+        Text: $dyn.value($data.FileNameLabel)}" role="textbox" data-dyn-template-applied="true" data-dyn-controlname="FileUploadFileNameLabel" id="Dialog_6_FileUploadFileNameLabel" data-dyn-lastvisible="true" tabindex="-1">Select a file to upload.</span><div class="filePickerContainer layout-container layout-horizontal layout-horizontal-bottomalign" data-dyn-bind="
+        Name: $data.Name + 'FileNameInput',
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.content },
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft }" data-dyn-form-name="FileUploadFileNameInput">
+        <div data-dyn-role="Input" class="fileUpload-FileName input_container layout-ignoreArrange editMode field-empty" data-dyn-bind="
+        visible: $data.Visible,
+        viewMode: $data.IsViewMode,
+        enabled: $data.Enabled,
+        sizing: $dyn.layout.sizing($data),
+        css: { 'field-empty': $data.isValueEmpty, 'field-hasLookupButton': $data.LookupButton, 'lookup-flyoutOpen': $data.ShowFlyout, 'lookup-only': $data.LookupOnly },
+        allowEdit: $data.AllowEdit,
+        boundaryFocus: { focusOutCallBack: $data.focusOutCallBack, focusInCallBack: $data.focusInCallBack, enabled: $data.LookupButton },
+        displayOptions: $data.DisplayOptions,
+    " data-dyn-options="{
+            Label: $dyn.label('FileUpload_FileNameInputLabel'), 
+            Name: $data.Name + 'FileNameDisplay',
+            AllowEdit: false,
+            Value: $data.fileNameDisplayValue}" data-dyn-focus=".field" data-dyn-template-applied="true" data-dyn-controlname="FileUploadFileNameDisplay" id="Dialog_6_FileUploadFileNameDisplay" data-dyn-lastvisible="true" aria-readonly="true" readonly="readonly"><label class="label staticText boundary-focus-skip" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + '_input', $data),
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp }" id="Dialog_6_FileUploadFileNameDisplay_label" for="Dialog_6_FileUploadFileNameDisplay_input" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">File Upload Control File Name</label><span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="26" id="Dialog_6_26_helptext"></span><span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }" title=""></span><input class="textbox field displayoption alignmentLeft" autocomplete="off" type="text" role="textbox" data-dyn-bind="
+        attr: {
+            name: $data.Name,
+            placeholder: $data.PlaceHolder, 
+            'aria-label': $data.AccessibilityLabel,
+            'aria-invalid': !$dyn.value($data.IsValid),
+        },
+        boundValue: { binder: $data.valueBinder, changeMode: $data.ChangeMode },
+        link: $dyn.ui.link($data),
+        secondaryNavigation: {keyboard: $data.OnKeyboardSecondaryNavigation, mouse: $data.OnMouseSecondaryNavigation},
+        skip: $dyn.ui.skip($data),
+        password: $data.PasswordMode,
+        title: $data.toolTip,
+        id: $data.Id + '_input',
+        required: $data.Required,
+        allowEdit: $data.allowTyping,
+        enabled: $data.Enabled,
+        maxlength: $data.conditionalLimitTextLength,
+        textAlign: $data.Alignment,
+        keyDown: $data.keyDown,
+        input: $data.onInput,
+        click: $data.onInputClick,
+        preview: $dyn.ui.preview($data),
+        foregroundColor: $data.ForegroundColor,
+        backgroundColor: $data.BackgroundColor,
+        superTooltip: $dyn.ui.superTooltip($data),
+        css: { 'validationFailed': $data.IsShowingWarningIndicator }" name="FileUploadFileNameDisplay" placeholder="" aria-label="File Upload Control File Name, Input" aria-invalid="false" tabindex="0" title="" id="Dialog_6_FileUploadFileNameDisplay_input" aria-readonly="true" readonly="readonly" data-dynamics-input-alignment="Left" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" data-hasqtip="12"><div class="lookupDock-buttonContainer layout-ignoreArrange" data-dyn-bind="if: $dyn.value($data.LookupButton)">
+        
+    </div></div>  
+        <div class="fileUpload-fileInputControl">
+            <button data-dyn-role="Button" data-dyn-bind="
+    visible: $data.Visible,
+    enabled: $data.Enabled,
+    click: $data.Clicked,
+    keyDown: $data.keyDown,
+    ariaPressed: $data.Toggled,
+    skip: $dyn.ui.skip($data),
+    superTooltip: $dyn.ui.superTooltip($data),
+    attr: {
+        'name': $data.Name,
+        'aria-label': $data.AccessibilityLabel, 
+        'data-dyn-button-display': $data.buttonDisplay,
+    },
+    sizing: $dyn.layout.sizing($data),
+    css: { 'button-isDefault' : $data.DefaultButton,
+           'button-attachment-count' : $dyn.value($data.IsLabelBubble) }" data-dyn-options="{
+                Name: $data.Name + 'BrowseButton',
+                Label: $data.BrowseText,
+                Enabled: $data.browseEnabled,
+                Click: $data.BrowseButtonClicked}" class="button dynamicsButton" type="button" data-dyn-template-applied="true" data-dyn-controlname="FileUploadBrowseButton" id="Dialog_6_FileUploadBrowseButton" data-dyn-lastvisible="true" tabindex="0" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" name="FileUploadBrowseButton" aria-label="Browse" data-dyn-button-display="Auto"><div class="button-container">
+        <span class="button-commandRing imageBinder-emptyImage" data-dyn-bind="img: $dyn.ui.img($data)"></span>
+        <span data-dyn-bind="
+            id: $data.Id + '_label', 
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id, $data),
+            css: { 'button-label' : !$dyn.value($data.IsLabelBubble),
+                   'button-attach-label' : $dyn.value($data.IsLabelBubble) }" id="Dialog_6_FileUploadBrowseButton_label" for="Dialog_6_FileUploadBrowseButton" class="button-label">Browse</span>
+    </div></button>
+            <input class="fileUpload-fileInput" type="file" data-dyn-bind="
+                id: $data.Id + '_input',
+                attr: { 'accept': $data.CommonFileTypesAccepted,
+                        'file-upload-file-input': $data.Name }" id="Dialog_6_FileUpload_input" accept=".csv" file-upload-file-input="FileUpload">
+        </div>
+    </div><div data-dyn-role="ProgressBar" data-dyn-bind="
+    visible: $data.Visible, 
+    enabled: $data.Enabled, 
+    isIndeterminate: $data.IsIndeterminate,
+    sizing: $dyn.layout.sizing($data),
+    attr: {
+        'aria-valuemin': $data.MinValue, 
+        'aria-valuemax': $data.MaxValue,
+        'aria-valuenow': $data.Value,
+    }" data-dyn-options="{
+        Name: $data.Name + 'FileUploadProgressBar',
+        Value: $data.ProgressPercent,
+        Visible: $data.DisplayProgressBar}" class="progressBar" role="progressbar" aria-live="assertive" aria-atomic="true" aria-relevant="all" data-dyn-template-applied="true" data-dyn-controlname="FileUploadFileUploadProgressBar" aria-busy="false" aria-label="Current value 0 out of 100" id="Dialog_6_FileUploadFileUploadProgressBar" data-dyn-lastvisible="false" aria-valuemin="undefined" aria-valuemax="undefined" aria-valuenow="0" style="display: none;"><div class="progressBar-indicator-container">
+        <div class="progressBar-indicator" data-dyn-bind="width: { value: $value($data.Percent), unit: '%'}"></div>
+    </div><div class="activity">
+        <div class="activity-item"></div>
+        <div class="activity-item"></div>
+        <div class="activity-item"></div>
+        <div class="activity-item"></div>
+        <div class="activity-item"></div>
+    </div></div><button data-dyn-role="Button" class="fileUpload-Upload button dynamicsButton" data-dyn-bind="
+    visible: $data.Visible,
+    enabled: $data.Enabled,
+    click: $data.Clicked,
+    keyDown: $data.keyDown,
+    ariaPressed: $data.Toggled,
+    skip: $dyn.ui.skip($data),
+    superTooltip: $dyn.ui.superTooltip($data),
+    attr: {
+        'name': $data.Name,
+        'aria-label': $data.AccessibilityLabel, 
+        'data-dyn-button-display': $data.buttonDisplay,
+    },
+    sizing: $dyn.layout.sizing($data),
+    css: { 'button-isDefault' : $data.DefaultButton,
+           'button-attachment-count' : $dyn.value($data.IsLabelBubble) }" data-dyn-options="{
+        Name: $data.Name + 'UploadButton',
+        Label: $dyn.label('FileUpload_UploadButtonLabel'),
+        Enabled: $data.UploadButtonEnabled,
+        Click: $data.SubmitButtonClicked}" type="button" data-dyn-template-applied="true" data-dyn-controlname="FileUploadUploadButton" id="Dialog_6_FileUploadUploadButton" data-dyn-lastvisible="true" disabled="disabled" tabindex="-1" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" name="FileUploadUploadButton" aria-label="Upload" data-dyn-button-display="Auto"><div class="button-container">
+        <span class="button-commandRing imageBinder-emptyImage" data-dyn-bind="img: $dyn.ui.img($data)"></span>
+        <span data-dyn-bind="
+            id: $data.Id + '_label', 
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id, $data),
+            css: { 'button-label' : !$dyn.value($data.IsLabelBubble),
+                   'button-attach-label' : $dyn.value($data.IsLabelBubble) }" id="Dialog_6_FileUploadUploadButton_label" for="Dialog_6_FileUploadUploadButton" class="button-label">Upload</span>
+    </div></button><button data-dyn-role="Button" class="fileUpload-Cancel button dynamicsButton" data-dyn-bind="
+    visible: $data.Visible,
+    enabled: $data.Enabled,
+    click: $data.Clicked,
+    keyDown: $data.keyDown,
+    ariaPressed: $data.Toggled,
+    skip: $dyn.ui.skip($data),
+    superTooltip: $dyn.ui.superTooltip($data),
+    attr: {
+        'name': $data.Name,
+        'aria-label': $data.AccessibilityLabel, 
+        'data-dyn-button-display': $data.buttonDisplay,
+    },
+    sizing: $dyn.layout.sizing($data),
+    css: { 'button-isDefault' : $data.DefaultButton,
+           'button-attachment-count' : $dyn.value($data.IsLabelBubble) }" data-dyn-options="{
+        Name: $data.Name + 'CancelButton',
+        Label: $dyn.label('FileUpload_CancelButtonlabel'),
+        Enabled: $data.cancelEnabled,
+        Click: $data.CancelButtonClicked}" type="button" data-dyn-template-applied="true" data-dyn-controlname="FileUploadCancelButton" id="Dialog_6_FileUploadCancelButton" data-dyn-lastvisible="true" tabindex="0" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" name="FileUploadCancelButton" aria-label="Cancel" data-dyn-button-display="Auto"><div class="button-container">
+        <span class="button-commandRing imageBinder-emptyImage" data-dyn-bind="img: $dyn.ui.img($data)"></span>
+        <span data-dyn-bind="
+            id: $data.Id + '_label', 
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id, $data),
+            css: { 'button-label' : !$dyn.value($data.IsLabelBubble),
+                   'button-attach-label' : $dyn.value($data.IsLabelBubble) }" id="Dialog_6_FileUploadCancelButton_label" for="Dialog_6_FileUploadCancelButton" class="button-label">Cancel</span>
+    </div></button></div></div></div></div></div></div></div></div></div></div><div data-dyn-serverid="96_0" data-dyn-rootserverid="87_0" data-dyn-controlname="TabPg_1" data-dyn-role="SectionPage" class="section-page layout-reflow-scope fill-width layout-container layout-vertical" role="tab" data-dyn-container=".section-container" data-dyn-bind="
+        css: { 'section-page-noncollapsible': $value($data.FastTabExpanded) == 'Always'},
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        keyDown: $data.keyDown,
+        sizing: {
+            width: $dyn.layout.Size.available,
+            height:  ($value($data.FastTabExpanded) == 'Always') ? $dyn.layout.Size.available : $dyn.layout.Size.content,
+            minFlexHeight: ($value($data.FastTabExpanded) == 'Always') ? '280px' : undefined,
+        },
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical }" data-dyn-template-applied="true" id="Dialog_6_TabPg_1" data-dyn-lastvisible="true"><header class="section-page-header fill-width layout-container layout-horizontal layout-horizontal-bottomalign" tabindex="0" data-dyn-bind="
+        click: $data.Clicked,
+        skip: $dyn.options(function() { return { skip: $data.Skip, enabled: true }; }, $data.Updating),
+        ariaExpanded: $data.Expanded,
+        id: $data.Id + '_header',
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.content },
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft }" aria-expanded="true" id="Dialog_6_TabPg_1_header" aria-labelledby="Dialog_6_TabPg_1_caption">
+        <h1 class="section-page-caption" data-dyn-bind="
+            id: $data.Id + '_caption',
+            title: $data.Label,
+            labelFor: $dyn.ui.labelFor($element.parentNode, $data),
+            superTooltip: $dyn.ui.superTooltip($data)" id="Dialog_6_TabPg_1_caption" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" title="Run in the background">Run in the background</h1>
+        <div data-dyn-bind="sizing: { width: $dyn.layout.Size.available }" class="fill-width">
+            <div data-dyn-content="replace: '[data-dyn-role=SectionPageHeader]'" data-dyn-content-applied="true" style="display: none;"></div><div data-dyn-serverid="97_0" data-dyn-rootserverid="87_0" data-dyn-controlname="SysGen_TabPg_1Header" data-dyn-role="SectionPageHeader" class="section-page-summary layout-container layout-horizontal layout-right layout-horizontal-bottomalign" data-dyn-bind="
+    sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.content },
+    layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalRight }" data-dyn-container="true" data-dyn-content="append: { content: '*' }" data-dyn-content-applied="true" data-dyn-template-applied="true" id="Dialog_6_SysGen_TabPg_1Header"></div>
+        </div>
+        <div class="section-page-arrow"></div>
+    </header><div class="section-container container-hasBackground fill-width layout-container layout-vertical" role="tabpanel" data-dyn-bind="
+        visible: $data.Expanded,
+        id: $data.Id + '_container',
+        sizing: { width: $dyn.layout.Size.available, height:  ($value($data.FastTabExpanded) == 'Always') ? $dyn.layout.Size.available : $dyn.layout.Size.content,  },
+        layout: $dyn.layout.containerBinding($data),
+        attr: { 'aria-labelledBy': $data.Id + '_header'}" data-dyn-content="append: ':not([data-dyn-role=SectionPageHeader])'" data-dyn-content-applied="true" data-dyn-lastvisible="true" id="Dialog_6_TabPg_1_container" aria-labelledby="Dialog_6_TabPg_1_header" style="">
+    <div data-dyn-serverid="100_0" data-dyn-rootserverid="87_0" data-dyn-controlname="TabPg_1_toolbar" data-dyn-role="Toolbar" class="toolbar fill-width" role="toolbar" data-dyn-bind="visible: $data.Visible, enabled: $data.Enabled, sizing: $dyn.layout.sizing($data)" data-dyn-container="true" data-dyn-template-applied="true" id="Dialog_6_TabPg_1_toolbar" data-dyn-lastvisible="true"><div class="toolbar-replace" data-dyn-content="replace: '*'" style="display: none;" data-dyn-content-applied="true"></div><div data-dyn-serverid="101_0" data-dyn-rootserverid="87_0" data-dyn-controlname="TabPg_1_toolbar_buttons" data-dyn-role="ToolbarGroup" class="toolbar-group" role="group" data-dyn-bind="
+     visible: $data.Visible, 
+     enabled: $data.Enabled" data-dyn-container="true" data-dyn-template-applied="true" id="Dialog_6_TabPg_1_toolbar_buttons" data-dyn-lastvisible="true"><div class="toolbarGroup-replace" data-dyn-content="replace: '*'" style="display: none;" data-dyn-content-applied="true"></div><button data-dyn-serverid="102_0" data-dyn-rootserverid="87_0" data-dyn-controlname="MnuItm_1" data-dyn-role="MenuItemButton" class="Auto button dynamicsButton" type="button" data-dyn-bind="
+    visible: $data.Visible,
+    enabled: $data.Enabled,
+    click: $data.Clicked,
+    keyDown: $data.keyDown,
+    ariaPressed: $data.Toggled,
+    skip: $dyn.ui.skip($data),
+    superTooltip: $dyn.ui.superTooltip($data),
+    attr: {
+        'name': $data.Name,
+        'aria-label': $data.AccessibilityLabel, 
+        'data-dyn-button-display': $data.buttonDisplay,
+    },
+    sizing: $dyn.layout.sizing($data),
+    css: { 'button-isDefault' : $data.DefaultButton,
+           'button-attachment-count' : $dyn.value($data.IsLabelBubble) }" data-dyn-template-applied="true" buttonstyle="Auto" id="Dialog_6_MnuItm_1" data-dyn-lastvisible="true" tabindex="0" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" name="MnuItm_1" aria-label="Recurrence" data-dyn-button-display="Auto"><div class="button-container">
+        <span class="button-commandRing imageBinder-emptyImage" data-dyn-bind="img: $dyn.ui.img($data)"></span>
+        <span data-dyn-bind="
+            id: $data.Id + '_label', 
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id, $data),
+            css: { 'button-label' : !$dyn.value($data.IsLabelBubble),
+                   'button-attach-label' : $dyn.value($data.IsLabelBubble) }" id="Dialog_6_MnuItm_1_label" for="Dialog_6_MnuItm_1" class="button-label">Recurrence</span>
+    </div></button><button data-dyn-serverid="103_0" data-dyn-rootserverid="87_0" data-dyn-controlname="MnuItm_2" data-dyn-role="MenuItemButton" class="Auto button dynamicsButton" type="button" data-dyn-bind="
+    visible: $data.Visible,
+    enabled: $data.Enabled,
+    click: $data.Clicked,
+    keyDown: $data.keyDown,
+    ariaPressed: $data.Toggled,
+    skip: $dyn.ui.skip($data),
+    superTooltip: $dyn.ui.superTooltip($data),
+    attr: {
+        'name': $data.Name,
+        'aria-label': $data.AccessibilityLabel, 
+        'data-dyn-button-display': $data.buttonDisplay,
+    },
+    sizing: $dyn.layout.sizing($data),
+    css: { 'button-isDefault' : $data.DefaultButton,
+           'button-attachment-count' : $dyn.value($data.IsLabelBubble) }" data-dyn-template-applied="true" buttonstyle="Auto" id="Dialog_6_MnuItm_2" data-dyn-lastvisible="true" tabindex="0" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" name="MnuItm_2" aria-label="Alerts" data-dyn-button-display="Auto"><div class="button-container">
+        <span class="button-commandRing imageBinder-emptyImage" data-dyn-bind="img: $dyn.ui.img($data)"></span>
+        <span data-dyn-bind="
+            id: $data.Id + '_label', 
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id, $data),
+            css: { 'button-label' : !$dyn.value($data.IsLabelBubble),
+                   'button-attach-label' : $dyn.value($data.IsLabelBubble) }" id="Dialog_6_MnuItm_2_label" for="Dialog_6_MnuItm_2" class="button-label">Alerts</span>
+    </div></button><div class="toolbarGroup-overflow" data-dyn-bind="visible: $data.Visible" data-dyn-lastvisible="true"></div></div><div class="toolbar-overflow overflow-button More-symbol" data-dyn-role="OverflowButton" data-dyn-bind="
+             visible: $data.Visible,
+             title: $dyn.label('AppBar_OverflowToolTip'),
+             superTooltip: $dyn.ui.superTooltip($data),
+             flyout:{
+                flyout: $('.overflow-menu', $element),
+                show: $data.MenuOpen,
+                my: 'left top',
+                positionResize: true, clickSubscriber: $data.ClickSubscriber}" data-dyn-options="{MenuOpen: $data.OverflowMenuOpen, ClickSubscriber: $data.overflowClickSubscriber}" tabindex="0" data-dyn-template-applied="true" data-dyn-controlname="40" id="Dialog_6_40" data-dyn-lastvisible="true" title="More" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" aria-expanded="false" style="display: none;"><div class="overflow-menu sysPopup allowFlyoutClickPropagation" style="display: none" data-dyn-lastvisible="false"></div></div></div><div data-dyn-serverid="104_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Grp_6" data-dyn-role="Group" class="Auto group no-caption-group fill-width layout-container layout-vertical" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_Grp_6" data-dyn-lastvisible="true" data-dyn-frametype="None"><div class="group_header fill-width" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="false" style="display: none;">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)">
+        </label>
+    </div><div class="group_content fill-width layout-container layout-horizontal layout-horizontal-topalign" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <div data-dyn-serverid="105_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Grp_7" data-dyn-role="Group" class="Auto group no-caption-group layout-container layout-vertical" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_Grp_7" data-dyn-lastvisible="true" data-dyn-frametype="Auto"><div class="group_header" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="false" style="display: none;">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)">
+        </label>
+    </div><div class="group_content layout-container layout-vertical" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <label data-dyn-serverid="106_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Fld1_1" data-dyn-role="CheckBox" class="Auto checkBox-container layout-ignoreArrange displayoption hasdiscretesize-width discretesize-width-small fixed-width autoStyle" data-dyn-focus=".toggle-box" data-dyn-bind="
+    enabled: $data.Enabled,
+    allowEdit: $data.AllowEdit,
+    visible: $data.Visible,
+    sizing: $dyn.layout.sizing($data),
+    preview: $dyn.ui.preview($data),
+    checked: $data.formattedValue,
+    chooseCss: { 'style': $dyn.ui.checkBoxStyle($data) },
+    keyDown: $data.keyDown,
+    displayOptions: $data.DisplayOptions," data-dyn-template-applied="true" id="Dialog_6_Fld1_1" data-dyn-lastvisible="true" aria-checked="true" aria-expanded="false"><span class="checkBox" role="checkbox" tabindex="0" data-dyn-bind="
+        click: $data.clickHandler,
+        skip: $dyn.ui.skip($data),
+        checked: $data.formattedValue,
+        id: $data.Id + '_check',
+        attr: {
+            'aria-describedby': $data.Id + '_helptext',
+            'aria-label': $data.AccessibilityLabel,
+        }" aria-checked="true" id="Dialog_6_Fld1_1_check" aria-describedby="Dialog_6_Fld1_1_helptext" aria-label="Batch processing, Select to run this task as a batch"></span><label class="staticText label  checkBox-label" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.labelForId), $data),
+           click: function (evt) { if ($data.IsStandard) { $data.toggleValue(evt); } },
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp } " id="Dialog_6_Fld1_1_label" for="Dialog_6_Fld1_1_toggle" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">Batch processing</label><span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }"></span><span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="41" id="Dialog_6_41_helptext"></span><div class="field">
+        <span class="toggle-value" data-dyn-bind="text: $data.YesNoText, title: $data.YesNoText, attr: {'aria-describedby': $data.Id + '_helptext' }," title="Yes" aria-describedby="Dialog_6_Fld1_1_helptext">Yes</span>
+        <span class="toggle-box" role="checkbox" data-dyn-bind="
+            mouseDown: $data.clickHandler,
+            skip: $dyn.ui.skip($data),
+            checked: $data.formattedValue,
+            id: $data.Id + '_toggle',
+            attr: { 
+                'aria-describedby': $data.Id + '_helptext',
+                'aria-label': $data.AccessibilityLabel,
+            }" tabindex="0" aria-checked="true" id="Dialog_6_Fld1_1_toggle" aria-describedby="Dialog_6_Fld1_1_helptext" aria-label="Batch processing, Select to run this task as a batch"></span>
+    </div></label></div></div><div data-dyn-serverid="107_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Grp_9" data-dyn-role="Group" class="Auto group no-caption-group layout-container layout-vertical" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_Grp_9" data-dyn-lastvisible="true" data-dyn-frametype="Auto"><div class="group_header" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="false" style="display: none;">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)">
+        </label>
+    </div><div class="group_content layout-container layout-vertical" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <div data-dyn-serverid="108_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Fld2_1" data-dyn-role="Input" class="Auto input_container layout-ignoreArrange editMode hasdiscretesize-width discretesize-width-large fixed-width" data-dyn-focus=".field" data-dyn-bind="
+        visible: $data.Visible,
+        viewMode: $data.IsViewMode,
+        enabled: $data.Enabled,
+        sizing: $dyn.layout.sizing($data),
+        css: { 'field-empty': $data.isValueEmpty, 'field-hasLookupButton': $data.LookupButton, 'lookup-flyoutOpen': $data.ShowFlyout, 'lookup-only': $data.LookupOnly },
+        allowEdit: $data.AllowEdit,
+        boundaryFocus: { focusOutCallBack: $data.focusOutCallBack, focusInCallBack: $data.focusInCallBack, enabled: $data.LookupButton },
+        displayOptions: $data.DisplayOptions,
+    " data-dyn-template-applied="true" id="Dialog_6_Fld2_1" data-dyn-lastvisible="true"><label class="label staticText boundary-focus-skip" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + '_input', $data),
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp }" id="Dialog_6_Fld2_1_label" for="Dialog_6_Fld2_1_input" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">Task description</label><span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="42" id="Dialog_6_42_helptext"></span><span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }" title="Fixed asset group transfer"></span><input class="textbox field displayoption alignmentAuto" autocomplete="off" type="text" role="textbox" data-dyn-bind="
+        attr: {
+            name: $data.Name,
+            placeholder: $data.PlaceHolder, 
+            'aria-label': $data.AccessibilityLabel,
+            'aria-invalid': !$dyn.value($data.IsValid),
+        },
+        boundValue: { binder: $data.valueBinder, changeMode: $data.ChangeMode },
+        link: $dyn.ui.link($data),
+        secondaryNavigation: {keyboard: $data.OnKeyboardSecondaryNavigation, mouse: $data.OnMouseSecondaryNavigation},
+        skip: $dyn.ui.skip($data),
+        password: $data.PasswordMode,
+        title: $data.toolTip,
+        id: $data.Id + '_input',
+        required: $data.Required,
+        allowEdit: $data.allowTyping,
+        enabled: $data.Enabled,
+        maxlength: $data.conditionalLimitTextLength,
+        textAlign: $data.Alignment,
+        keyDown: $data.keyDown,
+        input: $data.onInput,
+        click: $data.onInputClick,
+        preview: $dyn.ui.preview($data),
+        foregroundColor: $data.ForegroundColor,
+        backgroundColor: $data.BackgroundColor,
+        superTooltip: $dyn.ui.superTooltip($data),
+        css: { 'validationFailed': $data.IsShowingWarningIndicator }" name="Fld2_1" placeholder="" aria-label="Task description, Input" aria-invalid="false" tabindex="0" id="Dialog_6_Fld2_1_input" maxlength="100" data-dynamics-input-alignment="Auto" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" title="Fixed asset group transfer"><div class="lookupDock-buttonContainer layout-ignoreArrange" data-dyn-bind="if: $dyn.value($data.LookupButton)">
+        
+    </div></div><div data-dyn-serverid="109_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Fld3_1" data-dyn-role="Input" class="Auto input_container layout-ignoreArrange editMode hasdiscretesize-width discretesize-width-small fixed-width field-empty field-hasLookupButton" data-dyn-focus=".field" data-dyn-bind="
+        visible: $data.Visible,
+        viewMode: $data.IsViewMode,
+        enabled: $data.Enabled,
+        sizing: $dyn.layout.sizing($data),
+        css: { 'field-empty': $data.isValueEmpty, 'field-hasLookupButton': $data.LookupButton, 'lookup-flyoutOpen': $data.ShowFlyout, 'lookup-only': $data.LookupOnly },
+        allowEdit: $data.AllowEdit,
+        boundaryFocus: { focusOutCallBack: $data.focusOutCallBack, focusInCallBack: $data.focusInCallBack, enabled: $data.LookupButton },
+        displayOptions: $data.DisplayOptions,
+    " data-dyn-template-applied="true" id="Dialog_6_Fld3_1" data-dyn-lastvisible="true"><label class="label staticText boundary-focus-skip" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + '_input', $data),
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp }" id="Dialog_6_Fld3_1_label" for="Dialog_6_Fld3_1_input" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">Batch group</label><span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="43" id="Dialog_6_43_helptext"></span><span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }" title=""></span><input class="textbox field displayoption alignmentLeft" autocomplete="off" type="text" role="textbox" data-dyn-bind="
+        attr: {
+            name: $data.Name,
+            placeholder: $data.PlaceHolder, 
+            'aria-label': $data.AccessibilityLabel,
+            'aria-invalid': !$dyn.value($data.IsValid),
+        },
+        boundValue: { binder: $data.valueBinder, changeMode: $data.ChangeMode },
+        link: $dyn.ui.link($data),
+        secondaryNavigation: {keyboard: $data.OnKeyboardSecondaryNavigation, mouse: $data.OnMouseSecondaryNavigation},
+        skip: $dyn.ui.skip($data),
+        password: $data.PasswordMode,
+        title: $data.toolTip,
+        id: $data.Id + '_input',
+        required: $data.Required,
+        allowEdit: $data.allowTyping,
+        enabled: $data.Enabled,
+        maxlength: $data.conditionalLimitTextLength,
+        textAlign: $data.Alignment,
+        keyDown: $data.keyDown,
+        input: $data.onInput,
+        click: $data.onInputClick,
+        preview: $dyn.ui.preview($data),
+        foregroundColor: $data.ForegroundColor,
+        backgroundColor: $data.BackgroundColor,
+        superTooltip: $dyn.ui.superTooltip($data),
+        css: { 'validationFailed': $data.IsShowingWarningIndicator }" name="Fld3_1" placeholder="" aria-label="Batch group, Input, Collapsed, " aria-invalid="false" tabindex="0" title="" id="Dialog_6_Fld3_1_input" data-dynamics-input-alignment="Left" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)"><div class="lookupDock-buttonContainer layout-ignoreArrange" data-dyn-bind="if: $dyn.value($data.LookupButton)">
+        
+    <div class="lookupButton" tabindex="-1" data-dyn-bind="
+             title: $dyn.label('Input_LookupTooltip'),
+            superTooltip: $dyn.ui.superTooltip($data),
+            attr: {'data-dyn-helptext': $dyn.label('Input_LookupHelpText')},
+            flyout: { skipAria: true, focusTarget: $data.FindFocusTarget, takeFocus: $data.ShouldFlyoutTakeFocus, requestPopup: $data.showPopup, of: $data.$inputElement, show: $data.ShowFlyout, positionResize: true, highlyResponsive: true, routeMessagesToParent: true}" data-dyn-stop-binding="true" title="Open" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" data-dyn-helptext="(Alt+Down)">
+        </div></div></div><label data-dyn-serverid="110_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Fld4_1" data-dyn-role="CheckBox" class="Auto checkBox-container layout-ignoreArrange displayoption hasdiscretesize-width discretesize-width-small fixed-width autoStyle" data-dyn-focus=".toggle-box" data-dyn-bind="
+    enabled: $data.Enabled,
+    allowEdit: $data.AllowEdit,
+    visible: $data.Visible,
+    sizing: $dyn.layout.sizing($data),
+    preview: $dyn.ui.preview($data),
+    checked: $data.formattedValue,
+    chooseCss: { 'style': $dyn.ui.checkBoxStyle($data) },
+    keyDown: $data.keyDown,
+    displayOptions: $data.DisplayOptions," data-dyn-template-applied="true" id="Dialog_6_Fld4_1" data-dyn-lastvisible="true"><span class="checkBox" role="checkbox" tabindex="0" data-dyn-bind="
+        click: $data.clickHandler,
+        skip: $dyn.ui.skip($data),
+        checked: $data.formattedValue,
+        id: $data.Id + '_check',
+        attr: {
+            'aria-describedby': $data.Id + '_helptext',
+            'aria-label': $data.AccessibilityLabel,
+        }" id="Dialog_6_Fld4_1_check" aria-describedby="Dialog_6_Fld4_1_helptext" aria-label="Private"></span><label class="staticText label  checkBox-label" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.labelForId), $data),
+           click: function (evt) { if ($data.IsStandard) { $data.toggleValue(evt); } },
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp } " id="Dialog_6_Fld4_1_label" for="Dialog_6_Fld4_1_toggle" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">Private</label><span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }"></span><span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="44" id="Dialog_6_44_helptext"></span><div class="field">
+        <span class="toggle-value" data-dyn-bind="text: $data.YesNoText, title: $data.YesNoText, attr: {'aria-describedby': $data.Id + '_helptext' }," title="No" aria-describedby="Dialog_6_Fld4_1_helptext">No</span>
+        <span class="toggle-box" role="checkbox" data-dyn-bind="
+            mouseDown: $data.clickHandler,
+            skip: $dyn.ui.skip($data),
+            checked: $data.formattedValue,
+            id: $data.Id + '_toggle',
+            attr: { 
+                'aria-describedby': $data.Id + '_helptext',
+                'aria-label': $data.AccessibilityLabel,
+            }" tabindex="0" id="Dialog_6_Fld4_1_toggle" aria-describedby="Dialog_6_Fld4_1_helptext" aria-label="Private"></span>
+    </div></label><label data-dyn-serverid="111_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Fld5_1" data-dyn-role="CheckBox" class="Auto checkBox-container layout-ignoreArrange displayoption hasdiscretesize-width discretesize-width-small fixed-width autoStyle" data-dyn-focus=".toggle-box" data-dyn-bind="
+    enabled: $data.Enabled,
+    allowEdit: $data.AllowEdit,
+    visible: $data.Visible,
+    sizing: $dyn.layout.sizing($data),
+    preview: $dyn.ui.preview($data),
+    checked: $data.formattedValue,
+    chooseCss: { 'style': $dyn.ui.checkBoxStyle($data) },
+    keyDown: $data.keyDown,
+    displayOptions: $data.DisplayOptions," data-dyn-template-applied="true" id="Dialog_6_Fld5_1" data-dyn-lastvisible="true"><span class="checkBox" role="checkbox" tabindex="0" data-dyn-bind="
+        click: $data.clickHandler,
+        skip: $dyn.ui.skip($data),
+        checked: $data.formattedValue,
+        id: $data.Id + '_check',
+        attr: {
+            'aria-describedby': $data.Id + '_helptext',
+            'aria-label': $data.AccessibilityLabel,
+        }" id="Dialog_6_Fld5_1_check" aria-describedby="Dialog_6_Fld5_1_helptext" aria-label="Critical Job"></span><label class="staticText label  checkBox-label" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.labelForId), $data),
+           click: function (evt) { if ($data.IsStandard) { $data.toggleValue(evt); } },
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp } " id="Dialog_6_Fld5_1_label" for="Dialog_6_Fld5_1_toggle" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">Critical Job</label><span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }"></span><span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="45" id="Dialog_6_45_helptext"></span><div class="field">
+        <span class="toggle-value" data-dyn-bind="text: $data.YesNoText, title: $data.YesNoText, attr: {'aria-describedby': $data.Id + '_helptext' }," title="No" aria-describedby="Dialog_6_Fld5_1_helptext">No</span>
+        <span class="toggle-box" role="checkbox" data-dyn-bind="
+            mouseDown: $data.clickHandler,
+            skip: $dyn.ui.skip($data),
+            checked: $data.formattedValue,
+            id: $data.Id + '_toggle',
+            attr: { 
+                'aria-describedby': $data.Id + '_helptext',
+                'aria-label': $data.AccessibilityLabel,
+            }" tabindex="0" id="Dialog_6_Fld5_1_toggle" aria-describedby="Dialog_6_Fld5_1_helptext" aria-label="Critical Job"></span>
+    </div></label><div data-dyn-serverid="112_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Fld6_1" data-dyn-role="ComboBox" class="input_container field-hasLookupButton layout-reflow-scope comboBox editMode hasdiscretesize-width discretesize-width-large fixed-width" data-dyn-focus=".field" data-dyn-bind="
+    visible: $data.Visible,
+    viewMode: $data.IsViewMode,
+    sizing: $dyn.layout.sizing($data),
+    allowEdit: $data.AllowEdit,
+    preview: $dyn.ui.preview($data),
+    enabled: $data.Enabled,
+    dynValue: $dyn.value($data.Items) ? $data.SelectedItem : null,
+    displayOptions: $data.DisplayOptions,
+    boundaryFocus: { focusInCallBack: $data.focusInCallBack, focusOutCallBack: $data.focusOutCallBack, enabled: true }," data-dyn-template-applied="true" id="Dialog_6_Fld6_1" data-dyn-lastvisible="true" data-dyn-value="0"><label class="label staticText" data-dyn-bind="
+           id: $data.Id + '_label',
+           ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + '_input', $data),
+           superTooltip: $dyn.ui.superTooltip($data),
+           css: { 'showFieldHelpIcon': $dyn.ui.shouldFieldShowHelp($data) &amp;&amp; $dyn.debug.fieldHelp }" id="Dialog_6_Fld6_1_label" for="Dialog_6_Fld6_1_input" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">Monitoring category</label><div class="lookupDock-dockContainer lookupDock-comboBox" data-dyn-bind="
+        allowEdit: $data.AllowEdit,
+        enabled: $data.Enabled,
+        css: { 'hasFocusedChild': $data.isFocused() || $data.isExpanded(), 'statusMandatory': $data.IsShowingMandatoryIndicator, 'statusWarning': $data.IsShowingWarningIndicator },">
+        <div class="lookupDock-contentContainer">
+            <span data-dyn-role="FieldHelpSection" class="field-help" data-dyn-bind="id: $data.Id + '_helptext', text: $data.HelpText" style="display: none; visibility: hidden;" data-dyn-template-applied="true" data-dyn-controlname="46" id="Dialog_6_46_helptext"></span>
+            <span class="field-status" data-dyn-bind="title: $data.toolTip, click: $data.focusInput, focusIn: $data.focusInput, chooseCss: { 'status': $dyn.ui.status($data) }"></span>
+            <input class="textbox field displayoption" type="text" role="combobox" aria-autocomplete="list" readonly="readonly" data-dyn-bind="
+                attr: {
+                    name: $data.Name,
+                    'aria-describedby': $data.Id + '_helptext',
+                    'aria-invalid': !$dyn.value($data.IsValid),
+                    'aria-owns': $data.Id + '_list',
+                    'aria-label': $data.AccessibilityLabel,
+                    'aria-activedescendant': $data.Id + '_list_item' + $dyn.value($data.selectedIndex),
+                    'aria-haspopup': $data.allowUserChanges()
+                },
+                required: $data.Required,
+                enumAriaItems: $data.Items,
+                enumAriaSelection: $data.selectedIndex,
+                enabled: $data.Enabled,
+                id: $data.Id + '_input',
+                valueReadonly: $data.selectedLabel(),
+                ariaAllowEdit: $data.AllowEdit,
+                textAlign: $data.Alignment,
+                skip: $dyn.ui.skip($data),
+                title: $data.selectedLabel(),
+                blur: $data.blur,
+                keyDown: $data.onKeyDown,
+                foregroundColor: $data.ForegroundColor,
+                backgroundColor: $data.BackgroundColor,
+                typeToSelect: { selectedIndex: $data.selectedIndex, shownIndex: $data.shownIndex, items: $dyn.value($data.Items), allowEdit: $data.AllowEdit, skipSelection: $data.skipSelection },
+                click: $data.onInputClick,
+                css: { 'validationFailed': $data.IsShowingWarningIndicator },
+                superTooltip: $dyn.ui.superTooltip($data)," name="Fld6_1" aria-describedby="Dialog_6_Fld6_1_helptext" aria-invalid="false" aria-owns="Dialog_6_Fld6_1_list" aria-label="Monitoring category, Collapsed, " aria-activedescendant="Dialog_6_Fld6_1_list_item0" aria-haspopup="true" aria-maxvalue="11" aria-minvalue="1" aria-valuenow="1" id="Dialog_6_Fld6_1_input" aria-readonly="false" tabindex="0" title="" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)">
+            <ul class="comboBox-list sysPopup" tabindex="-1" role="listbox" data-dyn-bind="
+                id: $data.Id + '_list',
+                attr: {
+                    'aria-hidden': !$dyn.value($data.isExpanded),
+                },
+                foreach: $data.Items" id="Dialog_6_Fld6_1_list" aria-hidden="true" data-dyn-lastvisible="false" style="display: none;"><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item0" value="0" aria-posinset="1" aria-setsize="11" aria-selected="true" data-dyn-index="0">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} "></a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item1" value="1" aria-label="Integration" aria-posinset="2" aria-setsize="11" aria-selected="false" data-dyn-index="1">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Integration</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item2" value="2" aria-label="Workflow" aria-posinset="3" aria-setsize="11" aria-selected="false" data-dyn-index="2">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Workflow</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item3" value="3" aria-label="Store Order Synchronizer Job" aria-posinset="4" aria-setsize="11" aria-selected="false" data-dyn-index="3">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Store Order Synchronizer Job</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item4" value="4" aria-label="Assortment Details Job" aria-posinset="5" aria-setsize="11" aria-selected="false" data-dyn-index="4">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Assortment Details Job</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item5" value="5" aria-label="Assortment Lookup Job" aria-posinset="6" aria-setsize="11" aria-selected="false" data-dyn-index="5">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Assortment Lookup Job</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item6" value="6" aria-label="Transaction Sales Trans Mark Multi Job" aria-posinset="7" aria-setsize="11" aria-selected="false" data-dyn-index="6">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Transaction Sales Trans Mark Multi Job</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item7" value="7" aria-label="Statement Calculate Multi Job" aria-posinset="8" aria-setsize="11" aria-selected="false" data-dyn-index="7">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Statement Calculate Multi Job</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item8" value="8" aria-label="Sync Orders Scheduler Task" aria-posinset="9" aria-setsize="11" aria-selected="false" data-dyn-index="8">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Sync Orders Scheduler Task</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item9" value="9" aria-label="Internal Org Update Channel Job" aria-posinset="10" aria-setsize="11" aria-selected="false" data-dyn-index="9">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Internal Org Update Channel Job</a>
+                </li><li role="option" data-dyn-bind="
+                    id: $parent().Id + '_list_item' + $index,
+                    valueReadonly: $data.Value,
+                    label: $data.Label,
+                    attr: {
+                        'aria-posinset': $index + 1,
+                        'aria-setsize': $length,
+                        'aria-selected': $dyn.value($parent().shownItem) == $dyn.value($data.Value),
+                    }" data-dyn-stop-binding="true" id="Dialog_6_Fld6_1_list_item10" value="10" aria-label="Sales Form Letter Invoice Task" aria-posinset="11" aria-setsize="11" aria-selected="false" data-dyn-index="10">
+                    <a data-dyn-bind="
+                        text: $data.Label,
+                        click: {callBack: function () { $parent().clickedItem($index); }, stopPropagation: true} ">Sales Form Letter Invoice Task</a>
+                </li></ul>
+        </div>
+        <div class="lookupDock-buttonContainer layout-ignoreArrange">
+            <div class="lookupButton" tabindex="-1" role="button" aria-label="Lookup Button" data-dyn-bind="
+                 title: $dyn.label('Input_LookupTooltip'),
+                 superTooltip: $dyn.ui.superTooltip($data),
+                 attr: {'data-dyn-helptext': $dyn.label('Input_LookupHelpText')},
+                 flyout: { skipAria: true, flyout: $($element).parent().parent().find('.comboBox-list'), of: $($element).parent().parent(), show: $data.isExpanded, positionResize: true,
+                           takeFocus: false, clickSubscriber: $data.flyoutClickSubscriber, optOutOfWait: true }" title="Open" dyn-data-supertooltip="true" onmouseenter="$dyn.onMouseEnter.callMouseEnterFunction(this, event)" data-dyn-helptext="(Alt+Down)">
+            </div>
+        </div>
+    </div></div></div></div></div></div><div data-dyn-serverid="113_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Grp_11" data-dyn-role="Group" class="Auto group no-caption-group fill-width layout-container layout-vertical" data-dyn-bind="
+        extendedStyle: $data.Style,
+        visible: $data.Visible,
+        enabled: $data.Enabled,
+        attr: { 'data-dyn-frametype': $data.FrameType },
+        sizing: $dyn.layout.sizing($data),
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.vertical },
+        verticalSplitter: $data.VerticalSplitter,
+        horizontalSplitter: $data.HorizontalSplitter,
+        breakable: $dyn.value($data.IsBreakable),
+        breakableGroups: $dyn.options($dyn.layout.breakableGroupsOptions($data), $data.Updating),
+        css: { 'group-hasFrameOptionButton': $dyn.value($data.FrameOptionCSS), 'no-caption-group': $dyn.value($data.hasNoCaptionCSS)}" data-dyn-container=".group_content" data-dyn-template-applied="true" id="Dialog_6_Grp_11" data-dyn-lastvisible="true" data-dyn-frametype="Auto"><div class="group_header fill-width" data-dyn-bind="
+        click: {callBack: function() { $data.HeaderClicked(); }, stopPropagation: true},
+        groupButton: $data.FrameOptionButton,
+        visible: $dyn.value($data.FrameOptionButton) == 'None' ? $data.Label : true,
+        layout: { arrangeMethod: $dyn.layout.ArrangeMethod.horizontalLeft },
+        sizing: { width: $data.VerticalSplitter ? $dyn.layout.Size.available : $dyn.layout.Size.content }" data-dyn-lastvisible="false" style="display: none;">
+        <label class="group_title" data-dyn-bind="
+            id: $data.Id + '_text',
+            text: $data.Label,
+            ariaLabelFor: $dyn.ui.ariaLabelFor($data.Id + $dyn.value($data.getLabelForId()), $data),
+            skip: $dyn.options(function() { return { skip: !$dyn.util.isEnhancedTabSequenceEnabled() }; }, $data.Updating)">
+        </label>
+    </div><div class="group_content fill-width layout-container layout-vertical" data-dyn-bind="
+	    visible: $data.Expanded,
+        sizing: { width: $dyn.layout.Size.available, height: $dyn.layout.Size.available, ignoreSiblings: true },
+        layout: $dyn.layout.containerBinding($data)" data-dyn-content="append: '*'" data-dyn-content-applied="true" data-dyn-lastvisible="true">
+    <span data-dyn-serverid="114_0" data-dyn-rootserverid="87_0" data-dyn-controlname="Txt_7" data-dyn-role="Label" class="Auto staticText layout-ignoreArrange hasdiscretesize-width discretesize-width-medium fixed-width" role="textbox" data-dyn-bind="
+    text: { text: $dyn.value($data.Text), emptyStr: '&nbsp;' /* Use non-breaking space to maintain height when using an empty string. */},
+    sizing: $dyn.layout.sizing($data),
+    extendedStyle: $data.Style,
+    foregroundColor: $data.ForegroundColor,
+    backgroundColor: $data.BackgroundColor,
+    visible: $data.Visible,
+    skip: $dyn.ui.skip($data)" data-dyn-template-applied="true" id="Dialog_6_Txt_7" data-dyn-lastvisible="true" tabindex="0">Start date: 11/8/2018 (03:12:43 am) (GMT) Coordinated Universal Time</span></div></div></div></div></div>

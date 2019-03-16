@@ -1,0 +1,18 @@
+﻿{
+	"WebElement":
+	[
+		{
+			"HtmlElement":"input",
+			"Attribute":["id","name"]
+		},
+		{
+			"HtmlElement":"button",
+			"Attribute":["id","name","data-dyn-controlname"]
+		},
+		{
+			"HtmlElement":"li",
+			"Attribute":["id","name","data-dyn-controlname"]
+		}
+
+	]
+}
